@@ -1,0 +1,62 @@
+/*Beosztások, méretek*/
+body{
+    background-image:repeating-linear-gradient(white,orange);
+    color: red;
+}
+
+main{
+    display: grid;
+    gap:10px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "a n"
+    "f f"
+    ;
+}
+
+header{
+    grid-area: h;
+}
+
+article{
+    grid-area: a;
+}
+
+nav{
+    grid-area: n;
+}
+
+footer{
+    grid-area: f;
+}
+
+/*Színek*/
+.box{
+    background-color: black;
+}
+
+@media all and (max-width: 1000px) {
+    main{
+        grid-template-columns: 2fr 1fr;
+        
+    }
+    .box{
+        background-color: aqua;
+    }
+}
+
+@media all and (max-width: 600px) {
+    main{
+        grid-template-columns:1fr;
+        grid-template-areas: 
+    "h"
+    "a"
+    "n"
+    "f"
+    ;
+    }
+    .box{
+        background-color: white;
+    }
+}
