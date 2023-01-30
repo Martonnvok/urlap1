@@ -10,15 +10,25 @@
 <body>
     <main>
         <header class="box">
-           <h1>ŰRLAPOK GYAKORLÁSA</h1>
+           <h1>Html Űrlapok</h1>
         </header>
         <article class="box">
-            <form action="#" method="post"></form>
-            <label for="vNev">Vezetéknév: </label>
-            <input type="text" id="vNev" name="vezetekNev">
-            <label for="kNev">keresztknév: </label>
-            <input type="text" id="kNev" name="keresztNev">
-            <input type="button" value="Küldés">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Adatok</legend>
+                    <label for="vNev">Vezetéknév: </label>
+                    <input type="text" id="vNev" name="vezetekNev"  placeholder="Psenyeczki"> <br>
+                    <label for="kNev">keresztknév: </label>
+                    <input type="text" id="kNev" name="keresztNev" placeholder="Marci"> 
+                    <br>
+                    <label for="start">Születési idő:</label>
+                    <input type="date" id="start" name="trip-start"
+                                value="2018-07-22"
+                                min="2018-01-01" max="2018-12-31">
+                </fieldset>
+                <br>
+                <input class="submit" type="submit" value="Küldés">
+            </form>
         </article>
         <nav class="box">
             <ul>
@@ -28,6 +38,7 @@
         </nav>
         <footer class="box">
             <h2>&copy;Minden jog fenntartva</h2>
+            <h3>Készítette: Somogyvvári Márton</h3>
         </footer>
     </main>
     

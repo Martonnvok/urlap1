@@ -1,49 +1,96 @@
 /*Beosztások, méretek*/
 body{
-    background-image:repeating-linear-gradient(white,orange);
+    background-image:conic-gradient(white,orange);
     color: red;
 }
 
 main{
+    background-image:conic-gradient(white,orange);
+    background-repeat: no-repeat;
     display: grid;
-    gap:10px;
+    gap: 1.2rem;
     grid-template-columns: 4fr 1fr;
     grid-template-areas: 
     "h h"
     "a n"
     "f f"
     ;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
 }
-
+*{
+    box-sizing: border-box;
+    border-radius: 15px;
+}
 header{
     grid-area: h;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color: aqua;
 }
 
 article{
     grid-area: a;
+    height: 100vh;
+    padding: 15px;
 }
 
 nav{
     grid-area: n;
+    padding: 15px;
 }
 
 footer{
     grid-area: f;
+    padding: 15px;
 }
 
+fieldset{
+    background-image:conic-gradient(green,darkgreen);
+    color: aqua;
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.submit{
+    margin: 0 auto;
+    padding: 15px;
+    color: aqua;
+    background-image:conic-gradient(green,darkgreen);
+    border: 2px solid white;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+input{
+    text-align: left;
+    padding: 10px;
+    margin:10px;
+    font-size: 14px;
+}
+label{
+    text-align: right;
+}
 /*Színek*/
 .box{
     background-color: black;
 }
-
-@media all and (max-width: 1000px) {
-    main{
-        grid-template-columns: 2fr 1fr;
-        
-    }
-    .box{
-        background-color: aqua;
-    }
+legend{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    background-image:conic-gradient(green,darkgreen);
 }
 
 @media all and (max-width: 600px) {
@@ -55,8 +102,13 @@ footer{
     "n"
     "f"
     ;
+    width: 100%;
     }
-    .box{
-        background-color: white;
+    fieldset{
+        background-image:conic-gradient(green,darkgreen);
+        color: aqua;
+        text-align: left;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 }
